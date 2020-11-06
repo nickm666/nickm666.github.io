@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Interview Prepare | Hexo</title>
+  <title>Interview Prepare | Shengdi Mao blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##HashMap">
+  <meta name="description" content="多线程 线程种类-用户级（ULT） 由第三方app进行管理的线程 -内核级（KLT） 由内核管理的线程 数据结构-LinkedList-Set-Stack-Queue-HashSet（方便查重复的元素）    HashSet内部就是使用HashMap实现    HashSet里面的HashMap所有的value都是同一个Object而已    HashSet就是个简化的HashMap的-HashM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Interview Prepare">
 <meta property="og:url" content="http://yoursite.com/2020/06/28/Interview-Prepare/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##HashMap">
+<meta property="og:site_name" content="Shengdi Mao blog">
+<meta property="og:description" content="多线程 线程种类-用户级（ULT） 由第三方app进行管理的线程 -内核级（KLT） 由内核管理的线程 数据结构-LinkedList-Set-Stack-Queue-HashSet（方便查重复的元素）    HashSet内部就是使用HashMap实现    HashSet里面的HashMap所有的value都是同一个Object而已    HashSet就是个简化的HashMap的-HashM">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-27T20:51:19.000Z">
-<meta property="article:modified_time" content="2020-06-27T20:55:42.256Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:published_time" content="2020-06-27T22:51:19.000Z">
+<meta property="article:modified_time" content="2020-08-04T07:24:19.062Z">
+<meta property="article:author" content="Shengdi Mao">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Shengdi Mao blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -50,7 +50,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Shengdi Mao</a></h1>
 		</hgroup>
 		
 
@@ -108,7 +108,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Shengdi Mao</h1>
 			</hgroup>
 			
 			
@@ -167,15 +167,33 @@
 
         
         <a href="/2020/06/28/Interview-Prepare/" class="archive-article-date">
-  	<time datetime="2020-06-27T20:51:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
+  	<time datetime="2020-06-27T22:51:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##HashMap</p>
+        <p>多线程</p>
+<p>线程种类<br>-用户级（ULT） 由第三方app进行管理的线程</p>
+<p>-内核级（KLT） 由内核管理的线程</p>
+<p>数据结构<br>-LinkedList<br>-Set<br>-Stack<br>-Queue<br>-HashSet（方便查重复的元素）<br>    HashSet内部就是使用HashMap实现<br>    HashSet里面的HashMap所有的value都是同一个Object而已<br>    HashSet就是个简化的HashMap的<br>-HashMap<br>    Map中不允许重复的键。Map接口有两个基本的实现，HashMap和TreeMap<br>    TreeMap保存了对象的排列次序，而HashMap则不能<br>    HashMap允许键和值为null<br>    HashMap是非synchronized的，但collection框架提供方法能保证HashMap synchronized，这样多个线程同时访问HashMap时，能保证只有一个线程更改Map</p>
+<p>-Dynamic Programming<br>    leetcode 最长回文子串<br>    leetcode 最大正方形</p>
+<p>-Sliding Window<br>leetcode 无重复的最长字符</p>
+<p>-子节测试开发（实习）一面<br>    300w个数据，找出现次数最多<br>    Divide &amp; Conquer<br>    海量数据用bitmap算法</p>
+<pre><code>微博同时很多人用，服务器崩溃，可能发生的原因
+内存泄露
+线程死锁
+资源耗尽
 
+如何排查内存泄漏
+
+Http知识点（cookie vs session
+长链接vs短链接
+
+一条线段，找出2点 组成三角形的概率
+
+volatile 使变量对其他线程可见（原理volatile变量不会被换存在寄存器或其他处理器不可见的地方，是一种比synchronized 更轻量级的同步机制，volatile 总会返回最新的写入值）</code></pre>
       
 
       
@@ -313,7 +331,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 Shengdi Mao
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
