@@ -135,6 +135,27 @@
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-overview-active">
+      <!-- require APlayer -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+      <!-- require MetingJS-->
+      <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+      <!--QQ音乐-->   
+      <meting-js
+        server="tencent"
+        id="002yQnmX4AY3Uk"
+	      type="song" 
+	      mini="false"
+        fixed="false"
+        list-folded="true"
+        autoplay="false"
+        volume="0.4"
+        theme="#FADFA3"
+        order="random"
+	      loop="all"
+        preload="auto"
+        mutex="true">
+      </meting-js>
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -161,12 +182,17 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/nickx1122@gmail.com" title="E-Mail → nickx1122@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -201,7 +227,7 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
+        <span class="collection-header">Um..! 5 posts in total. Keep on posting.</span>
       </div>
 
       
