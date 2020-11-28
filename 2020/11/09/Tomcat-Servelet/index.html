@@ -18,10 +18,11 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
   <meta name="description" content="Tomcat: Apache基金组织 比较常用的服务器 中小型 开源免费 仅支持少量的JavaEE规范（共13种JavaEE规范） JSP&#x2F;Servelet* Tomcat部署：     1. 需要把项目文件夹放进webapps路径下     2. 将项目页面打包成war放到webapps路径下     3. 如果在别的目录下，可以在conf&#x2F;server.xml 用&lt;Context doc">
@@ -32,7 +33,7 @@
 <meta property="og:description" content="Tomcat: Apache基金组织 比较常用的服务器 中小型 开源免费 仅支持少量的JavaEE规范（共13种JavaEE规范） JSP&#x2F;Servelet* Tomcat部署：     1. 需要把项目文件夹放进webapps路径下     2. 将项目页面打包成war放到webapps路径下     3. 如果在别的目录下，可以在conf&#x2F;server.xml 用&lt;Context doc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-09T11:40:38.000Z">
-<meta property="article:modified_time" content="2020-11-11T15:17:34.864Z">
+<meta property="article:modified_time" content="2020-11-18T11:15:11.908Z">
 <meta property="article:author" content="Shengdi Mao">
 <meta name="twitter:card" content="summary">
 
@@ -178,8 +179,10 @@
 
         <section class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+   <a href="/">
     <img class="site-author-image" itemprop="image" alt="Shengdi Mao"
       src="/images/myphoto.png">
+   </a>
   <p class="site-author-name" itemprop="name">Shengdi Mao</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -187,7 +190,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -265,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-11 23:17:34" itemprop="dateModified" datetime="2020-11-11T23:17:34+08:00">2020-11-11</time>
+        <time title="Modified: 2020-11-18 19:15:11" itemprop="dateModified" datetime="2020-11-18T19:15:11+08:00">2020-11-18</time>
       </span>
 
   
@@ -299,7 +302,17 @@
 
 
 
-* Servelet（运行在服务器端的小程序）</code></pre>
+* Servlet（运行在服务器端的小程序）
+    * Servlet就是一个接口，定义了java类被服务器（Tomcaat）识别规范
+    * 需要自己重写Servlet接口，实现里面的方法
+    * 执行原理
+        当服务器接收到客户端请求，解析url获取访问Servlet的资源路径
+        查找web.xml 是否有对应的url标签题内容
+        如果有找servlet-class全类名
+        tomcat加载字节码进内存，并创建对象
+        调用service方法
+    由于servlet生命周期是项目开始直至项目结束，在此期间servlet可能有多个请求，因此
+    servlet不是线程安全的，所以需要注意尽量避免有servlet类成员变量</code></pre>
     </div>
 
     
@@ -381,6 +394,8 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
